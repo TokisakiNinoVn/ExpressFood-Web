@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import axiosInstance from '../../utils/axiosConfig';
 import { Card, Form, Input, Button, Typography, Space, message, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined, LoginOutlined } from '@ant-design/icons';
 import { AuthContext } from '../../context/AuthContext';
@@ -30,7 +31,8 @@ const Login = () => {
   const onFinish = async (values) => {
     setLoading(true);
     try {
-      const response = await axios.post('/api/public/auth/login', {
+      const response = await axiosInstance.post('/api/public/auth/login', {
+      // const response = await axios.post('/api/public/auth/login', {
         email: values.email,
         password: values.password,
       });
