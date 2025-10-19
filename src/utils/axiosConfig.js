@@ -2,7 +2,6 @@ import axios from 'axios';
 
 // Đọc BASE_URL từ file .env
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:5000';
-console.log(" BASE_URL: ", BASE_URL);
 
 // Tạo instance của axios
 const axiosInstance = axios.create({
