@@ -1,0 +1,143 @@
+.home-page {
+  padding-top: 64px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-title {
+  font-size: 56px !important;
+  font-weight: 700 !important;
+  color: white !important;
+  margin-bottom: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+.hero-description {
+  font-size: 20px !important;
+  color: white !important;
+  opacity: 0.9;
+  margin-bottom: 0 !important;
+}
+
+.hero-image {
+  position: relative;
+  height: 400px;
+}
+
+.floating-food {
+  position: absolute;
+  font-size: 80px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-food:nth-child(1) {
+  top: 0;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.floating-food:nth-child(2) {
+  top: 30%;
+  right: 10%;
+  animation-delay: 0.5s;
+}
+
+.floating-food:nth-child(3) {
+  bottom: 30%;
+  left: 10%;
+  animation-delay: 1s;
+}
+
+.floating-food:nth-child(4) {
+  bottom: 0;
+  right: 30%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  text-align: center !important;
+  margin-bottom: 60px !important;
+}
+
+.feature-card {
+  text-align: center;
+  border-radius: 12px !important;
+  height: 100%;
+}
+
+.feature-card .ant-card-body {
+  padding: 40px 24px;
+}
+
+.feature-description {
+  margin: 0 !important;
+  color: #666;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px !important;
+  }
+
+  .hero-description {
+    font-size: 16px !important;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .floating-food {
+    font-size: 50px;
+  }
+
+  .section-title {
+    font-size: 32px !important;
+  }
+}

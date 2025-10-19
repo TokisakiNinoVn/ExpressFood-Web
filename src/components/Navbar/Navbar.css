@@ -1,0 +1,106 @@
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  height: 64px;
+  line-height: 64px;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff6b6b;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar-logo:hover {
+  color: #ff5252;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-menu {
+  flex: 1;
+  margin: 0 40px;
+  border: none;
+  background: transparent;
+}
+
+.navbar-menu .ant-menu-item {
+  font-weight: 500;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: #ff6b6b;
+}
+
+.user-info {
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.user-info:hover {
+  background-color: #f5f5f5;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .user-name {
+    display: none;
+  }
+}
