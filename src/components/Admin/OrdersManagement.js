@@ -16,7 +16,7 @@ const OrdersManagement = () => {
   const fetchOrders = async () => {
     setLoading(true);
     try {
-      const response = await axiosInstance.get('/api/orders');
+      const response = await axiosInstance.get('/api/admin/orders');
       setOrders(response.data.data);
     } catch (error) {
       message.error('Không thể tải danh sách đơn hàng');

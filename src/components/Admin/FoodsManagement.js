@@ -21,7 +21,7 @@ const FoodsManagement = () => {
   const fetchFoods = async () => {
     setLoading(true);
     try {
-      const response = await axiosInstance.get('/api/foods');
+      const response = await axiosInstance.get('/api/admin/foods');
       setFoods(response.data.data);
     } catch (error) {
       message.error('Không thể tải danh sách món ăn');

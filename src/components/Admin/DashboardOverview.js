@@ -25,9 +25,9 @@ const DashboardOverview = () => {
   const fetchDashboardData = async () => {
     try {
       const [ordersRes, usersRes, foodsRes] = await Promise.all([
-        axiosInstance.get('/api/orders'),
-        axiosInstance.get('/api/users'),
-        axiosInstance.get('/api/foods'),
+        axiosInstance.get('/api/admin/orders'),
+        axiosInstance.get('/api/admin/users'),
+        axiosInstance.get('/api/admin/foods'),
       ]);
 
       const orders = ordersRes.data.data || [];

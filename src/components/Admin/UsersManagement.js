@@ -14,7 +14,7 @@ const UsersManagement = () => {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const response = await axiosInstance.get('/api/users');
+      const response = await axiosInstance.get('/api/admin/users');
       setUsers(response.data.data);
     } catch (error) {
       message.error('Không thể tải danh sách người dùng');
