@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import { Card, Form, Input, Button, Typography, Space, message } from 'antd';
 import { UserOutlined, LockOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
 import { AuthContext } from '../../context/AuthContext';
+import axiosInstance from '../../utils/axiosConfig';
+
 import './Auth.css';
 
 const { Title, Text } = Typography;
@@ -17,7 +19,7 @@ const Register = () => {
     setLoading(true);
     try {
       const { confirmPassword, ...registerData } = values;
-      const response = await axios.post('/api/auth/register', registerData);
+      const response = await axiosInstance.post('/api/public/auth/register', registerData);
       register(
         response.data.user, 
         response.data.accessToken, 
