@@ -2,7 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Row, Col, Card, Input, Button, Rate, Tag, Spin, Empty, Space, message } from 'antd';
 import { PlusOutlined, SearchOutlined } from '@ant-design/icons';
 import { CartContext } from '../../context/CartContext';
-import axios from 'axios';
+// import axios from 'axios';
+import axiosInstance from '../../utils/axiosConfig';
+
 import './Foods.css';
 
 const { Meta } = Card;
@@ -28,8 +30,9 @@ const Foods = () => {
 
   const fetchFoods = async () => {
     try {
-      const response = await axios.get('/api/public/foods');
+      const response = await axiosInstance.get('/api/public/foods');
       setFoods(response.data.data);
+      console.error(response.data.data);
       setLoading(false);
     } catch (error) {
       console.error('Error fetching foods:', error);
