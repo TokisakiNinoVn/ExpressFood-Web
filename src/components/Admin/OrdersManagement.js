@@ -26,7 +26,7 @@ const OrdersManagement = () => {
 
   const handleStatusChange = async (orderId, newStatus) => {
     try {
-      await axiosInstance.put(`/api/orders/${orderId}/status`, { status: newStatus });
+      await axiosInstance.put(`/api/admin/orders/${orderId}/status`, { status: newStatus });
       message.success('Cập nhật trạng thái thành công');
       fetchOrders();
     } catch (error) {

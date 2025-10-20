@@ -24,7 +24,7 @@ const UsersManagement = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axiosInstance.delete(`/api/users/${id}`);
+      await axiosInstance.delete(`/api/admin/users/${id}`);
       message.success('Xóa người dùng thành công');
       fetchUsers();
     } catch (error) {

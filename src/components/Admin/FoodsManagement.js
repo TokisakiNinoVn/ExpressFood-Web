@@ -43,7 +43,7 @@ const FoodsManagement = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axiosInstance.delete(`/api/foods/${id}`);
+      await axiosInstance.delete(`/api/admin/foods/${id}`);
       message.success('Xóa món ăn thành công');
       fetchFoods();
     } catch (error) {
@@ -54,7 +54,7 @@ const FoodsManagement = () => {
   const handleSubmit = async (values) => {
     try {
       if (editingFood) {
-        await axiosInstance.put(`/api/foods/${editingFood._id}`, values);
+        await axiosInstance.put(`/api/admin/foods/${editingFood._id}`, values);
         message.success('Cập nhật món ăn thành công');
       } else {
         await axiosInstance.post('/api/foods', values);
